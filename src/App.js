@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Header from './Components/Header';
+import Main from './Components/Main';
+import Content from './Components/Content';
+import dataset from './data';
+import Trending from './Components/trending';
+function createEntry(content) {
+  return (
+    <Content
+      key={content.id}
+      img={content.imgURL}
+      nme={content.name}
+      hding={content.heading}
+      p={content.para}
+    />
+  );
+}
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <Main/>
+      <Trending />
+      <div className='content'>{dataset.map(createEntry)}</div>
     </div>
   );
 }
