@@ -1,5 +1,5 @@
 import React from 'react'
-import banner from '../Images/banner.png'
+import banner from '../banner.png'
 function Main(){
   return (
     <div className='main'>

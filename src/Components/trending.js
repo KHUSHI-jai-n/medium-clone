@@ -1,4 +1,3 @@
-import react from "react";
 import trending from '../trending.png'
 function Trending(){
     return (
