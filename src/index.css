@@ -10,29 +10,30 @@ html {
 
 body {
   background: #eee;
-  padding: 0 16px;
+  padding: 0 1em;
 }
 
 header {
   background-color: #f5ba13;
-  margin: auto -16px;
-  padding: 16px 30px;
+  margin: auto -0.5em;
+  padding: 1em 1.875em;
   border-bottom: 1px solid black;
-  height: 75px;
+  height: 4.7em;
+  position: fixed;
 }
 
 .main {
   background-color: #f5ba13;
-  height: 460px;
-  margin: auto -16px;
+  height: 34.3em;
+  margin: auto -1em;
   border-bottom: 1px solid black;
 }
 
 .main h1 {
   display: block;
-  padding-top: 80px;
-  margin-left: 60px;
-  font-size: 106px;
+  padding-top: 170px;
+  margin-left:  60px;
+  font-size: 6.625em;
   font-weight: 400;
   font-family: gt-super, Georgia, Cambria, "Times New Roman", Times, serif;
   letter-spacing: -0.05em;
@@ -40,11 +41,11 @@ header {
 }
 
 .main .paragraph {
-  margin-left: 60px;
-  padding-top: 25px;
+  margin-left: 3.75em;
+  padding-top: 1.56em;
   display: block;
-  font-size: 24px;
-  line-height: 24px;
+  font-size: 1.5em;
+  line-height: 1.5em;
   color: #242424;
   font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -52,8 +53,8 @@ header {
 .nav{
   font-family: medium-content-sans-serif-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   cursor: pointer;
-  margin-left: 800px;
-  margin-top: -40px;
+  margin-left: 50em;
+  margin-top: -2.5em;
 }
 .nav .nav-elements{
   font-size: 14px;
@@ -94,15 +95,15 @@ header {
 }
 .banner{
   width: 40em;
-  margin-top: -360px;
+  margin-top:-400px;
   margin-left: 700px;
 }
 .content{
   background-color:rgb(228, 228, 204);
   display: grid;
-  gap: 50px 50px;
-  margin: auto -16px;
-  padding-right: 30px;
+  gap: 3.125em 3.125em;
+  margin: auto -1em;
+  padding-right: 1.875em;
   grid-template-columns: auto auto auto;
   justify-content: space-evenly;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -114,17 +115,16 @@ header {
 }
 .tr{
   background-color:rgb(228,228,204);
-  margin: auto -16px;
+  margin: auto -1em;
   padding-left: 40px;
   padding-bottom: 40px;
   padding-top: 20px;
 }
 
 .block{
-  margin-left: 40px;
+  margin-left: 2.5em;
   display: -ms-inline-grid;
-  width: 250px;
-  
+  width: 15.625em;
   word-wrap: break-word;
 }
 h4{
@@ -133,5 +133,30 @@ h4{
   padding: 5px;
 }
 .block .num{
-  width: 40px; 
+  width: 18%; 
+}
+
+@media screen and (max-width: 1028px) {
+  .banner {visibility: hidden;}
+  .nav-elements {visibility: hidden;}
+  .main h1 {
+    display: block;
+    padding-top: 120px;
+    margin-left:  60px;
+    
+  }
+  .paragraph{
+    font-size: 1em;
+  }
+  .btn {visibility: hidden;}
+  .block{
+    margin-left: 0.5em;
+    font-size: 1em;
+    width: 10.625em;
+    word-wrap: break-word;
+  }
+  .content{
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+  }
 }
